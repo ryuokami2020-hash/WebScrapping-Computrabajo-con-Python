@@ -15,7 +15,7 @@ def webscraping():
     listaOfertas = []
     
     print("Accediendo a Computrabajo...")
-    driver.get("https://pe.computrabajo.com/trabajo-de-ingeniero-sistemas")
+    driver.get("https://pe.computrabajo.com/trabajo-de-ingeniero-sistemas") #Se coloca /"Trabajo q quieres buscar"
     time.sleep(3) 
 
     tarjetas = driver.find_elements(By.CSS_SELECTOR, "a.js-o-link")
@@ -60,7 +60,7 @@ def webscraping():
     
 def archivoTexto(datos_recibidos):
     
-    rutaCarpeta = r"C:\Users\ryuok\Downloads"
+    rutaCarpeta = r"C:\Users\(Usuario)\Downloads" #Ruta donde se va a exportar los datos
     nombreArchivo = "ListaTrabajo.csv"
     rutaArchivo = os.path.join(rutaCarpeta, nombreArchivo)
     
